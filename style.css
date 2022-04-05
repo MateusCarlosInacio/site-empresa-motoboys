@@ -1,0 +1,153 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital@0;1&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box
+  }
+
+  
+  :root{
+      --verde_escuro: #228F0A;
+      --verde_claro: #53cc38cc;
+      --roxo: #914780;
+  }
+ 
+header{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    
+    height: 60px;  
+    align-items: center;
+    background-image: linear-gradient(135deg,#ff0000e0, #ff2525ab );
+
+       
+}
+header > h1{
+ color: white;
+ padding: 10px;
+ text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.39);
+ cursor:default;
+ font-style: italic;
+   
+}
+header a {
+    display: flex;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.11);
+    padding: 10px;
+    margin-right: 15px;
+    border-radius: 15px;
+    transition:0.5s;
+    font-weight: bold;
+    color: white;
+}
+header a:hover{
+    background-color: rgba(73, 13, 13, 0.856);
+
+}
+
+body{
+    background-color: rgba(37, 37, 37, 0.048);
+    font-family: 'Arimo', sans-serif;
+
+}
+.container-carrocel{
+    /*background-color: var(--verde_claro);*/
+    background-image: url(imagens/fundo-carrossel.jpg);
+    
+    color: rgba(78, 78, 78, 0.671);
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.container-carrocel background-image{
+    filter: blur(0px);
+}
+#carrocel{
+    width: 813px;
+    height: 445px;  
+    margin:auto;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.342);
+}
+#carrocel ul{
+    display: flex;
+   
+}
+#carrocel li{
+    position: relative;
+    animation: slide 15s infinite ease-out;
+}
+@keyframes slide {
+    0%{left:0px}
+    20%{left:0px}
+
+    30%{left:-813px}
+    50%{left:-813px}
+
+    60%{left:-1626px}
+    90%{left:-1626px}
+
+    100%{left:0px}
+
+}
+
+.container-serv{
+    background-image: linear-gradient(135deg,#ff0000e0, #ff2525ab );
+    
+}
+.container-serv img{
+    max-width: 200px;
+    max-height: 200px;
+}
+.servicos{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "article article article"
+    "paragrafo paragrafo paragrato"
+    ;
+}
+.servicos img{
+    transition: 0.3s;
+    grid-area: article;
+
+}
+.servicos img:hover{
+    max-height: calc(200px + 10%);
+    background-color: rgba(139, 0, 0, 0.336);
+
+    padding: 10px;
+    border-radius: 5px;
+}
+.servicos p{
+    font-size: 1.5em;
+    grid-area: paragrafo;
+    text-align: left;
+    color: white;
+}
+.servicos > article{
+    width: 250px;
+    height: 290px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+.container-infos{
+    background-color: darkolivegreen;
+}
+.infos{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0;
+    margin-right: 0px;
+}
+
+.infos > article{
+    border: 1px solid black;
+    width: 200%;
+    height: 290px;
+}
